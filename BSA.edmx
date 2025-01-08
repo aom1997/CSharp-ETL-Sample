@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BSAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BSA.dbo.EMPACO_ACOInsights_DataExtraction_Practices' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EMPACO_ACOInsights_DataExtraction_Practices">
+          <Key>
+            <PropertyRef Name="Rec_ID" />
+          </Key>
+          <Property Name="UniqueKey" Type="int" />
+          <Property Name="Eligibility" Type="varchar" MaxLength="500" />
+          <Property Name="TIN" Type="varchar" MaxLength="100" />
+          <Property Name="Practice" Type="varchar" MaxLength="4000" />
+          <Property Name="MemberSource" Type="varchar" MaxLength="100" />
+          <Property Name="Covid19Rule" Type="varchar" MaxLength="100" />
+          <Property Name="Year" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="varchar" MaxLength="4000" />
+          <Property Name="Metric" Type="varchar" MaxLength="4000" />
+          <Property Name="QTR1" Type="varchar" MaxLength="500" />
+          <Property Name="QTR2" Type="varchar" MaxLength="500" />
+          <Property Name="QTR3" Type="varchar" MaxLength="500" />
+          <Property Name="QTR4" Type="varchar" MaxLength="500" />
+          <Property Name="AVG" Type="varchar" MaxLength="500" />
+          <Property Name="WgtAvg" Type="varchar" MaxLength="500" />
+          <Property Name="YTD" Type="varchar" MaxLength="500" />
+          <Property Name="Membership" Type="varchar" MaxLength="500" />
+          <Property Name="DATASET" Type="varchar" MaxLength="50" />
+          <Property Name="Rec_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SAHS" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BSA.dbo.EMPACO_ACOInsights_DataExtraction_Providers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EMPACO_ACOInsights_DataExtraction_Providers">
+          <Key>
+            <PropertyRef Name="Rec_ID" />
+          </Key>
+          <Property Name="UniqueKey" Type="int" />
+          <Property Name="Eligibility" Type="varchar(max)" />
+          <Property Name="Practice" Type="varchar(max)" />
+          <Property Name="TIN" Type="varchar" MaxLength="50" />
+          <Property Name="Provider" Type="varchar(max)" />
+          <Property Name="NPI" Type="varchar" MaxLength="50" />
+          <Property Name="MemberSource" Type="varchar(max)" />
+          <Property Name="Covid19Rule" Type="varchar(max)" />
+          <Property Name="Year" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="varchar(max)" />
+          <Property Name="Metric" Type="varchar(max)" />
+          <Property Name="QTR1" Type="varchar(max)" />
+          <Property Name="QTR2" Type="varchar(max)" />
+          <Property Name="QTR3" Type="varchar(max)" />
+          <Property Name="QTR4" Type="varchar(max)" />
+          <Property Name="AVG" Type="varchar(max)" />
+          <Property Name="WeightedAvg" Type="varchar(max)" />
+          <Property Name="YTD" Type="varchar(max)" />
+          <Property Name="Membership" Type="varchar" MaxLength="500" />
+          <Property Name="DATASET" Type="varchar" MaxLength="50" />
+          <Property Name="Rec_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SAHS" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="BSAModelStoreContainer">
+          <EntitySet Name="EMPACO_ACOInsights_DataExtraction_Practices" EntityType="Self.EMPACO_ACOInsights_DataExtraction_Practices" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[UniqueKey] AS [UniqueKey], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Eligibility] AS [Eligibility], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[TIN] AS [TIN], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Practice] AS [Practice], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[MemberSource] AS [MemberSource], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Covid19Rule] AS [Covid19Rule], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Year] AS [Year], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Category] AS [Category], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Metric] AS [Metric], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[QTR1] AS [QTR1], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[QTR2] AS [QTR2], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[QTR3] AS [QTR3], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[QTR4] AS [QTR4], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[AVG] AS [AVG], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[WgtAvg] AS [WgtAvg], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[YTD] AS [YTD], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Membership] AS [Membership], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[DATASET] AS [DATASET], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[Rec_ID] AS [Rec_ID], 
+    [EMPACO_ACOInsights_DataExtraction_Practices].[SAHS] AS [SAHS]
+    FROM [dbo].[EMPACO_ACOInsights_DataExtraction_Practices] AS [EMPACO_ACOInsights_DataExtraction_Practices]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EMPACO_ACOInsights_DataExtraction_Providers" EntityType="Self.EMPACO_ACOInsights_DataExtraction_Providers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[UniqueKey] AS [UniqueKey], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Eligibility] AS [Eligibility], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Practice] AS [Practice], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[TIN] AS [TIN], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Provider] AS [Provider], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[NPI] AS [NPI], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[MemberSource] AS [MemberSource], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Covid19Rule] AS [Covid19Rule], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Year] AS [Year], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Category] AS [Category], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Metric] AS [Metric], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[QTR1] AS [QTR1], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[QTR2] AS [QTR2], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[QTR3] AS [QTR3], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[QTR4] AS [QTR4], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[AVG] AS [AVG], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[WeightedAvg] AS [WeightedAvg], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[YTD] AS [YTD], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Membership] AS [Membership], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[DATASET] AS [DATASET], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[Rec_ID] AS [Rec_ID], 
+    [EMPACO_ACOInsights_DataExtraction_Providers].[SAHS] AS [SAHS]
+    FROM [dbo].[EMPACO_ACOInsights_DataExtraction_Providers] AS [EMPACO_ACOInsights_DataExtraction_Providers]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BSAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EMPACO_ACOInsights_DataExtraction_Practices">
+          <Key>
+            <PropertyRef Name="Rec_ID" />
+          </Key>
+          <Property Name="UniqueKey" Type="Int32" />
+          <Property Name="Eligibility" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Practice" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="MemberSource" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Covid19Rule" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="Metric" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="QTR1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="QTR2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="QTR3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="QTR4" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AVG" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="WgtAvg" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="YTD" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Membership" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DATASET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Rec_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SAHS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EMPACO_ACOInsights_DataExtraction_Providers">
+          <Key>
+            <PropertyRef Name="Rec_ID" />
+          </Key>
+          <Property Name="UniqueKey" Type="Int32" />
+          <Property Name="Eligibility" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Practice" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Provider" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NPI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MemberSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Covid19Rule" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Metric" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QTR1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QTR2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QTR3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QTR4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AVG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="WeightedAvg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="YTD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Membership" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DATASET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Rec_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SAHS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="BSA" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EMPACO_ACOInsights_DataExtraction_Practices" EntityType="Self.EMPACO_ACOInsights_DataExtraction_Practices" />
+          <EntitySet Name="EMPACO_ACOInsights_DataExtraction_Providers" EntityType="Self.EMPACO_ACOInsights_DataExtraction_Providers" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BSAModelStoreContainer" CdmEntityContainer="BSA">
+          <EntitySetMapping Name="EMPACO_ACOInsights_DataExtraction_Practices">
+            <EntityTypeMapping TypeName="BSAModel.EMPACO_ACOInsights_DataExtraction_Practices">
+              <MappingFragment StoreEntitySet="EMPACO_ACOInsights_DataExtraction_Practices">
+                <ScalarProperty Name="UniqueKey" ColumnName="UniqueKey" />
+                <ScalarProperty Name="Eligibility" ColumnName="Eligibility" />
+                <ScalarProperty Name="TIN" ColumnName="TIN" />
+                <ScalarProperty Name="Practice" ColumnName="Practice" />
+                <ScalarProperty Name="MemberSource" ColumnName="MemberSource" />
+                <ScalarProperty Name="Covid19Rule" ColumnName="Covid19Rule" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Metric" ColumnName="Metric" />
+                <ScalarProperty Name="QTR1" ColumnName="QTR1" />
+                <ScalarProperty Name="QTR2" ColumnName="QTR2" />
+                <ScalarProperty Name="QTR3" ColumnName="QTR3" />
+                <ScalarProperty Name="QTR4" ColumnName="QTR4" />
+                <ScalarProperty Name="AVG" ColumnName="AVG" />
+                <ScalarProperty Name="WgtAvg" ColumnName="WgtAvg" />
+                <ScalarProperty Name="YTD" ColumnName="YTD" />
+                <ScalarProperty Name="Membership" ColumnName="Membership" />
+                <ScalarProperty Name="DATASET" ColumnName="DATASET" />
+                <ScalarProperty Name="Rec_ID" ColumnName="Rec_ID" />
+                <ScalarProperty Name="SAHS" ColumnName="SAHS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPACO_ACOInsights_DataExtraction_Providers">
+            <EntityTypeMapping TypeName="BSAModel.EMPACO_ACOInsights_DataExtraction_Providers">
+              <MappingFragment StoreEntitySet="EMPACO_ACOInsights_DataExtraction_Providers">
+                <ScalarProperty Name="UniqueKey" ColumnName="UniqueKey" />
+                <ScalarProperty Name="Eligibility" ColumnName="Eligibility" />
+                <ScalarProperty Name="Practice" ColumnName="Practice" />
+                <ScalarProperty Name="TIN" ColumnName="TIN" />
+                <ScalarProperty Name="Provider" ColumnName="Provider" />
+                <ScalarProperty Name="NPI" ColumnName="NPI" />
+                <ScalarProperty Name="MemberSource" ColumnName="MemberSource" />
+                <ScalarProperty Name="Covid19Rule" ColumnName="Covid19Rule" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Metric" ColumnName="Metric" />
+                <ScalarProperty Name="QTR1" ColumnName="QTR1" />
+                <ScalarProperty Name="QTR2" ColumnName="QTR2" />
+                <ScalarProperty Name="QTR3" ColumnName="QTR3" />
+                <ScalarProperty Name="QTR4" ColumnName="QTR4" />
+                <ScalarProperty Name="AVG" ColumnName="AVG" />
+                <ScalarProperty Name="WeightedAvg" ColumnName="WeightedAvg" />
+                <ScalarProperty Name="YTD" ColumnName="YTD" />
+                <ScalarProperty Name="Membership" ColumnName="Membership" />
+                <ScalarProperty Name="DATASET" ColumnName="DATASET" />
+                <ScalarProperty Name="Rec_ID" ColumnName="Rec_ID" />
+                <ScalarProperty Name="SAHS" ColumnName="SAHS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="fe14945eb4c14dc08390b3d5d37b0df7" Name="Diagram1">
+        <EntityTypeShape EntityType="BSAModel.EMPACO_ACOInsights_DataExtraction_Practices" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BSAModel.EMPACO_ACOInsights_DataExtraction_Providers" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

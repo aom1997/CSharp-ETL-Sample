@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empire_BSA_Import", "Empire_BSA_Import.csproj", "{0A91AC91-F4D4-4572-92DB-37D7ABE1B2E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A91AC91-F4D4-4572-92DB-37D7ABE1B2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A91AC91-F4D4-4572-92DB-37D7ABE1B2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A91AC91-F4D4-4572-92DB-37D7ABE1B2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A91AC91-F4D4-4572-92DB-37D7ABE1B2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8D35D4A-2269-42A5-A20E-B3BE1C43B252}
+	EndGlobalSection
+EndGlobal
