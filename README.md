@@ -1,4 +1,4 @@
-# C# ETL – Empire BSA Import Service
+# C# ETL –Data Import Service
 
 A production Windows Service built in C# that automates the ingestion of ACO (Accountable Care Organization) performance data from raw CSV extracts into a SQL Server database. The service runs continuously, polls for new files on a schedule, and loads hundreds of thousands of records using bulk insert with full error handling, logging, and email alerting.
 
